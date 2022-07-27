@@ -1,22 +1,75 @@
 #include "GameMain.h";
+#include <stdio.h>
+#include <string>
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	IsFullScreen = false;
+	WindowSizeWidth = 1280;
+	WindowSizeHeight = 720;
+	FpsMax = 60;
+
+	//画面サイズと使用する色バイト値を指定する
+	SetGraphMode(WindowSizeWidth, WindowSizeHeight, 16);
+	ChangeWindowMode(!IsFullScreen);
+
 	if (DxLib_Init() == -1)		// ＤＸライブラリ初期化処理
 	{
-		//画面サイズと使用する色バイト値を指定する
-		SetGraphMode(1280, 720, 16);
-		ChangeWindowMode(false);
-
 		return -1;			// エラーが起きたら直ちに終了
 	}
 
-	DrawPixel(320, 240, GetColor(255, 255, 255));	// 点を打つ
+	// 計測開始時間
+	ClockStart = std::chrono::system_clock::now();
 
-	WaitKey();				// キー入力待ち
+	IsGameEnd = false;
+	while (!IsGameEnd) {
 
-	DxLib_End();				// ＤＸライブラリ使用の終了処理
+		// フレーム間の経過時間
+		// マイクロ秒で計測して秒に変換
+		ClockEnd = std::chrono::system_clock::now();
+		double microSeconds = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(ClockEnd - ClockStart).count());
+		float deltaTime = static_cast<float>(microSeconds / 1000.0 / 1000.0);
+		ClockStart = ClockEnd;
 
-	return 0;				// ソフトの終了 
+		if (ProcessMessage() == -1) {
+			break;
+		}
+
+		FpsClockStart = std::chrono::system_clock::now();
+
+		// 画面をクリア
+		ClearDrawScreen();
+
+		// フレーム数表示
+		char fps[8];
+		snprintfDx(fps, 8, "%f", 1.0f / deltaTime);
+		DrawString(0, 0, fps, GetColor(255, 255, 255));
+
+		// 各ゲーム内処理をここで更新
+
+
+
+		// 裏側で組み立てていた画面を表に表示
+		ScreenFlip();
+
+		// フレーム値を調整
+		FpsClockEnd = std::chrono::system_clock::now();
+		double fpsMicroSec = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(FpsClockEnd - FpsClockStart).count());
+		float fpsMiliSec = static_cast<float>(fpsMicroSec / 1000.0);
+		float fpsLimit = 1000.0f / FpsMax;
+
+
+		if (fpsLimit > fpsMiliSec) {
+			//timeBeginPeriod(1);
+			Sleep(DWORD(fpsLimit - fpsMiliSec));
+			//timeEndPeriod(1);
+		}
+	}
+
+	// ＤＸライブラリ使用の終了処理
+	DxLib_End();
+
+	// ソフトの終了 
+	return 0;
 }

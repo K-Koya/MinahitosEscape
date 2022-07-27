@@ -13,18 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Main">
+      <UniqueIdentifier>{7ae73e5a-865e-4091-87ce-39e86896244f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main\Updatable">
+      <UniqueIdentifier>{1506bc52-b381-49f6-aeab-0d983312d72b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\Main\GameMain.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Updatable\Updatable.cpp">
+      <Filter>ソース ファイル\Main\Updatable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scripts\Main\GameMain.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Main</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Main\OftenIncludeFile.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Updatable\Updatable.h">
+      <Filter>ソース ファイル\Main\Updatable</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

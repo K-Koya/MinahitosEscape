@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Scripts\Main\GameMain.cpp" />
+    <ClCompile Include="Scripts\Updatable\Updatable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scripts\Main\GameMain.h" />
+    <ClInclude Include="Scripts\Main\OftenIncludeFile.h" />
+    <ClInclude Include="Scripts\Updatable\Updatable.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -136,13 +145,6 @@
       <AdditionalLibraryDirectories>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Scripts\Main\GameMain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Scripts\Main\GameMain.h" />
-    <ClInclude Include="Scripts\Main\OftenIncludeFile.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
