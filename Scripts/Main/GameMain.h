@@ -25,3 +25,4 @@ static bool IsGameEnd;
 
 /// <summary>1•b‚ ‚½‚è‚Ì•`‰æ‰ñ”</summary>
 static float FpsMax;
+

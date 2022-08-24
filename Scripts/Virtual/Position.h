@@ -1,0 +1,12 @@
+#pragma once
+#include "DxLib.h"
+
+class Position
+{
+public:
+	/// <summary>3éüå≥ç¿ïWíl</summary>
+	VECTOR* _position;
+
+private:
+	
+};

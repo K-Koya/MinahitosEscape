@@ -2,13 +2,21 @@
 #include <stdio.h>
 #include <string>
 
+/// <summary>ここに各種オブジェクトの毎フレーム実行関数を定義</summary>
+/// <param name="deltaTime">1フレーム当たりの時間</param>
+void Update(float deltaTime) {
+
+
+}
+
+
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	IsFullScreen = false;
 	WindowSizeWidth = 1280;
 	WindowSizeHeight = 720;
-	FpsMax = 60;
+	FpsMax = 60.0f;
 
 	//画面サイズと使用する色バイト値を指定する
 	SetGraphMode(WindowSizeWidth, WindowSizeHeight, 16);
@@ -47,23 +55,19 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DrawString(0, 0, fps, GetColor(255, 255, 255));
 
 		// 各ゲーム内処理をここで更新
-
-
+		Update(deltaTime);
 
 		// 裏側で組み立てていた画面を表に表示
 		ScreenFlip();
 
-		// フレーム値を調整
+		// 1フレームあたりの時間を調整するための遅延行為
 		FpsClockEnd = std::chrono::system_clock::now();
 		double fpsMicroSec = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(FpsClockEnd - FpsClockStart).count());
 		float fpsMiliSec = static_cast<float>(fpsMicroSec / 1000.0);
 		float fpsLimit = 1000.0f / FpsMax;
 
-
 		if (fpsLimit > fpsMiliSec) {
-			//timeBeginPeriod(1);
 			Sleep(DWORD(fpsLimit - fpsMiliSec));
-			//timeEndPeriod(1);
 		}
 	}
 

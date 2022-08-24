@@ -16,27 +16,36 @@
     <Filter Include="ソース ファイル\Main">
       <UniqueIdentifier>{7ae73e5a-865e-4091-87ce-39e86896244f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Main\Updatable">
+    <Filter Include="ソース ファイル\Main\Virtual">
       <UniqueIdentifier>{1506bc52-b381-49f6-aeab-0d983312d72b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Main">
+      <UniqueIdentifier>{b4de8a55-c17e-41db-83c1-b6ef80d0c4d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Main\Virtual">
+      <UniqueIdentifier>{de47f219-8e8e-4cd4-8f7c-0cc44deaddd2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\Main\GameMain.cpp">
       <Filter>ソース ファイル\Main</Filter>
     </ClCompile>
-    <ClCompile Include="Scripts\Updatable\Updatable.cpp">
-      <Filter>ソース ファイル\Main\Updatable</Filter>
+    <ClCompile Include="Scripts\Virtual\Updatable.cpp">
+      <Filter>ソース ファイル\Main\Virtual</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scripts\Main\GameMain.h">
-      <Filter>ソース ファイル\Main</Filter>
+      <Filter>ヘッダー ファイル\Main</Filter>
     </ClInclude>
-    <ClInclude Include="Scripts\Main\OftenIncludeFile.h">
-      <Filter>ソース ファイル\Main</Filter>
+    <ClInclude Include="Scripts\Virtual\Updatable.h">
+      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
     </ClInclude>
-    <ClInclude Include="Scripts\Updatable\Updatable.h">
-      <Filter>ソース ファイル\Main\Updatable</Filter>
+    <ClInclude Include="Scripts\Virtual\Position.h">
+      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Virtual\SceneBase.h">
+      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
