@@ -19,13 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Scripts\DataType\Quaternion.cpp" />
     <ClCompile Include="Scripts\Main\GameMain.cpp" />
     <ClCompile Include="Scripts\Virtual\Updatable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Scripts\DataType\Quaternion.h" />
     <ClInclude Include="Scripts\Main\GameMain.h" />
     <ClInclude Include="Scripts\Virtual\Position.h" />
     <ClInclude Include="Scripts\Virtual\SceneBase.h" />
+    <ClInclude Include="Scripts\Virtual\Transform.h" />
     <ClInclude Include="Scripts\Virtual\Updatable.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

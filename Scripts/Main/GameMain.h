@@ -26,3 +26,19 @@ static bool IsGameEnd;
 /// <summary>1秒あたりの描画回数</summary>
 static float FpsMax;
 
+
+
+/*
+const Test* Function (Test* test){}
+=> 戻り値のメンバ変数は書き換えはしない
+
+Test* const Function (Test* test){}
+=> 戻り値のポインタの参照先は変更しない
+
+Test* Function (const Test* test){}
+=> メソッド内部で引数の値の書き換えはしない
+
+Test* Function (Test* test) const {}
+=> メソッド内部で他のメンバ変数の書き換えはしない
+
+*/

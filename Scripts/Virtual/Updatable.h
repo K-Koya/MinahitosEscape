@@ -1,5 +1,6 @@
 #pragma once
 
+/// <summary>毎フレーム呼び出したいメソッドがある時に継承</summary>
 class Updatable 
 {
 public:

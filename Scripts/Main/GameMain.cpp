@@ -1,6 +1,7 @@
 #include "GameMain.h";
 #include <stdio.h>
 #include <string>
+#include "../DataType/Quaternion.h";
 
 /// <summary>ここに各種オブジェクトの毎フレーム実行関数を定義</summary>
 /// <param name="deltaTime">1フレーム当たりの時間</param>

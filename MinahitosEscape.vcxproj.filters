@@ -25,6 +25,12 @@
     <Filter Include="ヘッダー ファイル\Main\Virtual">
       <UniqueIdentifier>{de47f219-8e8e-4cd4-8f7c-0cc44deaddd2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\DataType">
+      <UniqueIdentifier>{46ce3f73-7311-467c-a280-1b6ea49f9be0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\DataType">
+      <UniqueIdentifier>{b12c663e-1400-44d3-9fb0-006e4095dab1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\Main\GameMain.cpp">
@@ -32,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Scripts\Virtual\Updatable.cpp">
       <Filter>ソース ファイル\Main\Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\DataType\Quaternion.cpp">
+      <Filter>ソース ファイル\DataType</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="Scripts\Virtual\SceneBase.h">
       <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Virtual\Transform.h">
+      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\DataType\Quaternion.h">
+      <Filter>ヘッダー ファイル\DataType</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
