@@ -35,13 +35,13 @@ public:
 
 	/// <summary>単位クォーターニオンを求める</summary>
 	/// <returns>単位クォーターニオン</returns>
-	inline Quaternion Norm() const {
+	inline Quaternion norm() const {
 		return Quaternion(x, y, z, w) / sqrtf(x * x + y * y + z * z + w * w);
 	}
 
 	/// <summary>逆クォーターニオンを求める</summary>
 	/// <returns>逆クォーターニオン</returns>
-	inline Quaternion Inv() const {
+	inline Quaternion inv() const {
 		float absSqr = x * x + y * y + z * z + w * w;
 		Quaternion ans = Quaternion(-x, -y, -z, w);
 		return ans / absSqr;
@@ -64,7 +64,7 @@ public:
 	/// <param name="divide">割る数</param>
 	/// <returns>除</returns>
 	inline Quaternion operator/(const float divide) const {
-		return Quaternion(x / divide, y * divide, z * divide, w * divide);
+		return Quaternion(x / divide, y / divide, z / divide, w / divide);
 	}
 
 	/// <summary>クォーターニオンの積（交換不可）</summary>

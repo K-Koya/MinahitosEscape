@@ -34,7 +34,7 @@ VECTOR* Quaternion::Rotate(const VECTOR target, const Quaternion rQot) {
 	pQot.z = target.z;
 	pQot.w = 1.0f;
 
-	pQot = rQot * pQot * rQot.Inv();
+	pQot = rQot * pQot * rQot.inv();
 
 	result->x = pQot.x;
 	result->y = pQot.y;

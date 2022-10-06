@@ -1,5 +1,6 @@
 #pragma once
 #include "DxLib.h"
+#include "../Virtual/SceneBase.h"
 #include <chrono>;
 
 /// <summary>これとclockEndの時間の差からアップデート間時間を求める</summary>
@@ -25,6 +26,7 @@ static bool IsGameEnd;
 
 /// <summary>1秒あたりの描画回数</summary>
 static float FpsMax;
+
 
 
 

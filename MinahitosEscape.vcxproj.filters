@@ -16,14 +16,8 @@
     <Filter Include="ソース ファイル\Main">
       <UniqueIdentifier>{7ae73e5a-865e-4091-87ce-39e86896244f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Main\Virtual">
-      <UniqueIdentifier>{1506bc52-b381-49f6-aeab-0d983312d72b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ヘッダー ファイル\Main">
       <UniqueIdentifier>{b4de8a55-c17e-41db-83c1-b6ef80d0c4d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Main\Virtual">
-      <UniqueIdentifier>{de47f219-8e8e-4cd4-8f7c-0cc44deaddd2}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\DataType">
       <UniqueIdentifier>{46ce3f73-7311-467c-a280-1b6ea49f9be0}</UniqueIdentifier>
@@ -31,16 +25,28 @@
     <Filter Include="ソース ファイル\DataType">
       <UniqueIdentifier>{b12c663e-1400-44d3-9fb0-006e4095dab1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Main\Scene">
+      <UniqueIdentifier>{c2498ab5-01c1-42e7-8ce9-36ae819d8616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Virtual">
+      <UniqueIdentifier>{1506bc52-b381-49f6-aeab-0d983312d72b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Virtual">
+      <UniqueIdentifier>{de47f219-8e8e-4cd4-8f7c-0cc44deaddd2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\Main\GameMain.cpp">
       <Filter>ソース ファイル\Main</Filter>
     </ClCompile>
     <ClCompile Include="Scripts\Virtual\Updatable.cpp">
-      <Filter>ソース ファイル\Main\Virtual</Filter>
+      <Filter>ソース ファイル\Virtual</Filter>
     </ClCompile>
     <ClCompile Include="Scripts\DataType\Quaternion.cpp">
       <Filter>ソース ファイル\DataType</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Virtual\Renderable.cpp">
+      <Filter>ソース ファイル\Virtual</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,19 +54,31 @@
       <Filter>ヘッダー ファイル\Main</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Virtual\Updatable.h">
-      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+      <Filter>ヘッダー ファイル\Virtual</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Virtual\Position.h">
-      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+      <Filter>ヘッダー ファイル\Virtual</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Virtual\SceneBase.h">
-      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+      <Filter>ヘッダー ファイル\Virtual</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\Virtual\Transform.h">
-      <Filter>ヘッダー ファイル\Main\Virtual</Filter>
+      <Filter>ヘッダー ファイル\Virtual</Filter>
     </ClInclude>
     <ClInclude Include="Scripts\DataType\Quaternion.h">
       <Filter>ヘッダー ファイル\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\DataType\MyList.h">
+      <Filter>ヘッダー ファイル\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\DataType\ForkList.h">
+      <Filter>ヘッダー ファイル\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Virtual\Renderable.h">
+      <Filter>ヘッダー ファイル\Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Main\Scene\TitleScene.h">
+      <Filter>ヘッダー ファイル\Main\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
