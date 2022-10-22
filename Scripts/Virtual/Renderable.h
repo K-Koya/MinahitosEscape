@@ -1,15 +1,20 @@
 #pragma once
+#include <vector>
 
 /// <summary>毎フレーム描画したいものがある時に継承</summary>
 class Renderable 
 {
 public:
 
+	/// <summary>レンダリングするオブジェクトのハンドル変数</summary>
+	std::vector<int> _useModelHandlers;
+
+	/// <summary>true : 毎フレーム描画する</summary>
+	bool _isRendering;
+
 	/// <summary>シーンから呼び出す、毎フレーム描画メソッド</summary>
 	void doRender();
 
-	/// <summary>true : 毎フレーム描画する</summary>
-	bool _isActive;
 
 private:
 

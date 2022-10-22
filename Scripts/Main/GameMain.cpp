@@ -1,15 +1,11 @@
 #include "GameMain.h";
-#include <stdio.h>
-#include <string>
-#include "../DataType/Quaternion.h";
 
 /// <summary>ここに各種オブジェクトの毎フレーム実行関数を定義</summary>
 /// <param name="deltaTime">1フレーム当たりの時間</param>
-void Update(float deltaTime) {
-
-
+void Update(const float deltaTime) {
+	PlayingScene->update(deltaTime);
+	PlayingScene->render();
 }
-
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -30,6 +26,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	// 計測開始時間
 	ClockStart = std::chrono::system_clock::now();
+
+	PlayingScene = new TitleScene();
 
 	IsGameEnd = false;
 	while (!IsGameEnd) {

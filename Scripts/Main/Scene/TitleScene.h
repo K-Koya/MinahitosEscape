@@ -1,7 +1,8 @@
 #pragma once
 #include "../../Virtual/SceneBase.h"
+#include "../Updatable/MapSample.h"
 
-class TitleScene
+class TitleScene : public SceneBase
 {
 public:
 	TitleScene();
@@ -11,10 +12,14 @@ private:
 
 };
 
-TitleScene::TitleScene()
+TitleScene::TitleScene() : SceneBase()
 {
+	MapSample* mapSample = new MapSample();
+	_updateObjects.emplace_back(mapSample);
+	_renderObjects.emplace_back(mapSample);
 }
 
 TitleScene::~TitleScene()
 {
+	
 }

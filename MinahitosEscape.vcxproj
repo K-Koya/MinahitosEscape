@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Scripts\DataType\Quaternion.cpp" />
     <ClCompile Include="Scripts\Main\GameMain.cpp" />
+    <ClCompile Include="Scripts\Main\Updatable\MapSample.cpp" />
     <ClCompile Include="Scripts\Virtual\Renderable.cpp" />
     <ClCompile Include="Scripts\Virtual\Updatable.cpp" />
   </ItemGroup>
@@ -30,6 +31,7 @@
     <ClInclude Include="Scripts\DataType\Quaternion.h" />
     <ClInclude Include="Scripts\Main\GameMain.h" />
     <ClInclude Include="Scripts\Main\Scene\TitleScene.h" />
+    <ClInclude Include="Scripts\Main\Updatable\MapSample.h" />
     <ClInclude Include="Scripts\Virtual\Position.h" />
     <ClInclude Include="Scripts\Virtual\Renderable.h" />
     <ClInclude Include="Scripts\Virtual\SceneBase.h" />

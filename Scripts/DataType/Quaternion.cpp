@@ -1,7 +1,7 @@
 #include "Quaternion.h"
 #include <math.h>;
 
-Quaternion::Quaternion(float x = 0.0f, float y = 0.0f, float z = 0.0f, float w = 0.0f) {
+Quaternion::Quaternion(float x, float y, float z, float w) {
 	this->w = w;
 	this->x = x;
 	this->y = y;

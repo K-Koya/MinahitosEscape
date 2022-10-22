@@ -1,7 +1,12 @@
 #pragma once
+#include <stdio.h>
+#include <string>
+#include <chrono>
 #include "DxLib.h"
+#include "../DataType/Quaternion.h"
 #include "../Virtual/SceneBase.h"
-#include <chrono>;
+#include "../Main/Scene/TitleScene.h"
+
 
 /// <summary>これとclockEndの時間の差からアップデート間時間を求める</summary>
 static std::chrono::system_clock::time_point ClockStart;
@@ -27,6 +32,9 @@ static bool IsGameEnd;
 /// <summary>1秒あたりの描画回数</summary>
 static float FpsMax;
 
+
+/// <summary>再生中のシーン</summary>
+static SceneBase* PlayingScene;
 
 
 

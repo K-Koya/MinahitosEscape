@@ -1,7 +1,7 @@
 #include "Updatable.h"
 
-void Updatable::doUpdate(float deltaTime) {
+void Updatable::doUpdate(const float deltaTime) {
 
-	if (!_isActive) return;
+	if (!_isUpdating) return;
 	update(deltaTime);
 }

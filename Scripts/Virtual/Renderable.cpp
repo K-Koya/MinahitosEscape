@@ -2,6 +2,6 @@
 
 void Renderable::doRender() {
 
-	if (!_isActive) return;
+	if (!_isRendering) return;
 	render();
 }

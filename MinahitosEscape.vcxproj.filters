@@ -34,6 +34,12 @@
     <Filter Include="ヘッダー ファイル\Virtual">
       <UniqueIdentifier>{de47f219-8e8e-4cd4-8f7c-0cc44deaddd2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Main\Updatable">
+      <UniqueIdentifier>{868f9f5f-74a2-484d-b7d8-d521ee1fb128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main\Updatable">
+      <UniqueIdentifier>{0f237fb4-6785-40ea-9801-e7ec8c62ec11}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\Main\GameMain.cpp">
@@ -47,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="Scripts\Virtual\Renderable.cpp">
       <Filter>ソース ファイル\Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Main\Updatable\MapSample.cpp">
+      <Filter>ソース ファイル\Main\Updatable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="Scripts\Main\Scene\TitleScene.h">
       <Filter>ヘッダー ファイル\Main\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Main\Updatable\MapSample.h">
+      <Filter>ヘッダー ファイル\Main\Updatable</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
