@@ -30,6 +30,7 @@
     <ClInclude Include="Scripts\DataType\MyList.h" />
     <ClInclude Include="Scripts\DataType\Quaternion.h" />
     <ClInclude Include="Scripts\Main\GameMain.h" />
+    <ClInclude Include="Scripts\Main\ResourceManager.h" />
     <ClInclude Include="Scripts\Main\Scene\TitleScene.h" />
     <ClInclude Include="Scripts\Main\Updatable\MapSample.h" />
     <ClInclude Include="Scripts\Virtual\Position.h" />

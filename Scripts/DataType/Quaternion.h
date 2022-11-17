@@ -6,7 +6,7 @@
 class Quaternion {
 public:
 
-	Quaternion(float x = 0.0f, float y = 0.0f, float z = 0.0f, float w = 0.0f);
+	Quaternion(float x = 0.0f, float y = 0.0f, float z = 0.0f, float w = 1.0f);
 	~Quaternion();
 
 	float x;
@@ -14,24 +14,33 @@ public:
 	float z;
 	float w;
 
+	/// <summary>今作られているクォーターニオンを行列にして返す</summary>
+	/// <returns>回転行列</returns>
+	MATRIX getMatrix() const;
+
+	/// <summary>本回転クォーターニオンに任意の軸でラジアン角分だけ回転させる回転を加える</summary>
+	/// <param name="rad"></param>
+	/// <param name="shaft"></param>
+	void addAngleAxis(const float rad, VECTOR shaft);
+
 	/// <summary>軸を指定してラジアン角分だけ回転させるクォーターニオンを求めて生成する</summary>
 	/// <param name="rad">ラジアン角度値</param>
 	/// <param name="shaft">回転軸</param>
 	/// <returns>回転クォーターニオン</returns>
-	static Quaternion* AngleAxis(const float rad, VECTOR shaft);
+	static Quaternion AngleAxis(const float rad, VECTOR shaft);
 
 	/// <summary>とあるベクトルをクォーターニオンを使って回転させる</summary>
 	/// <param name="target">回転させたいベクトル</param>
 	/// <param name="rQot">回転情報クォーターニオン</param>
 	/// <returns>回転後のベクトル</returns>
-	static VECTOR* Rotate(const VECTOR target, const Quaternion rQot);
-
+	static VECTOR Rotate(const VECTOR target, const Quaternion rQot);
+	
 	/// <summary>球面的に回転量を補完する</summary>
 	/// <param name="from">回転元</param>
 	/// <param name="to">回転先</param>
 	/// <param name="ratio">1回の実行による補完量の割合(0.0 ～ 1.0)</param>
 	/// <returns>回転クォーターニオン</returns>
-	static Quaternion* SphereLerp(Quaternion from, const Quaternion to, const float ratio);
+	static Quaternion SphereLerp(Quaternion from, const Quaternion to, const float ratio);
 
 	/// <summary>単位クォーターニオンを求める</summary>
 	/// <returns>単位クォーターニオン</returns>

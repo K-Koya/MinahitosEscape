@@ -92,5 +92,8 @@
     <ClInclude Include="Scripts\Main\Updatable\MapSample.h">
       <Filter>ヘッダー ファイル\Main\Updatable</Filter>
     </ClInclude>
+    <ClInclude Include="Scripts\Main\ResourceManager.h">
+      <Filter>ヘッダー ファイル\Main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
